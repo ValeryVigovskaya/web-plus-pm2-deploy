@@ -20,7 +20,7 @@ module.exports = {
       cwd: 'backend',
       path: DEPLOY_PATH,
       'pre-deploy': `scp scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'npm i && npm run start && pm2 start ecosystem.config.js --env production',
+      'post-deploy': 'npm i && npm run start && pm2 deploy ecosystem.config.js --env production',
     },
   },
 };

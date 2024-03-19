@@ -5,10 +5,6 @@ const {
 } = process.env;
 
 module.exports = {
-  apps: [{
-    name: 'frontend',
-    script: 'src/index.js',
-  }],
   // Настройка деплоя
   deploy: {
     production: {

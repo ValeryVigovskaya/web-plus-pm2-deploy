@@ -13,8 +13,8 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/ValeryVigovskaya/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      'pre-deploy': `npm run build && scp -Cr ./build/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
-      'post-deploy': 'cd frontend && npm i && npm run build',
+      'pre-deploy-local': `npm run build && scp -Cr ./build/* ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH}`,
+      'post-deploy': 'cd frontend && npm install && npm run build',
     },
   },
 };

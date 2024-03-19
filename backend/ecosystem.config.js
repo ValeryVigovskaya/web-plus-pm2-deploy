@@ -21,7 +21,7 @@ module.exports = {
       path: DEPLOY_PATH,
       'pre-deploy-local': `bash scripts/deployEnv.sh ${DEPLOY_USER}@${DEPLOY_HOST} ${DEPLOY_PATH}`,
       // 'pre-deploy': 'pm2 startOrRestart ecosystem.json --env production',
-      'post-deploy': 'cd current/backend && npm install && npm run start && pm2 startOrRestart ecosystem.json --env production',
+      'post-deploy': 'cd backend && npm install && npm run start && pm2 startOrRestart ecosystem.json --env production',
     },
   },
 };

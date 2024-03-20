@@ -5,10 +5,10 @@ const {
 } = process.env;
 
 module.exports = {
-  apps: [{
-    name: 'mesto-frontend',
-    script: './src/index.js',
-  }],
+  // apps: [{
+  //   name: 'mesto-frontend',
+  //   script: './src/index.js',
+  // }],
   // Настройка деплоя
   deploy: {
     production: {

@@ -7,7 +7,7 @@ const {
 module.exports = {
   apps: [{
     name: 'mesto-frontend',
-    script: './dist/build.js',
+    script: './src/index.js',
   }],
   // Настройка деплоя
   deploy: {

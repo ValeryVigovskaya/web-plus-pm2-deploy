@@ -13,7 +13,8 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: 'https://github.com/ValeryVigovskaya/web-plus-pm2-deploy.git',
       path: DEPLOY_PATH,
-      'post-deploy': 'cd frontend && npm install && npm run build && pm2 startOrRestart ecosystem.config.js --env production',
+      'pre-deploy-local': `npm run build && scp -Cr ./build/* ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}`,
+      'post-deploy': 'cd frontend && npm install && pm2 startOrRestart ecosystem.config.js --env production',
     },
   },
 };
